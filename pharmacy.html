@@ -1,0 +1,165 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Order Medicines - Hospital</title>
+        <link rel="stylesheet" href="css/order.css">
+        <link rel="icon" type="image/x-icon" href="images/business-logo-design-template-2510a832449f6d336956b5800ddbe169_screen.jpg">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/headerstyles.css">
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/business-logo-design-template-2510a832449f6d336956b5800ddbe169_screen.jpg" alt="Logo">
+                </a>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <nav class="navbar" id="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li class="dropdown">
+                            <a href="service.html">Services</a>
+                            <div class="dropdown-menu">
+                                <a href="service.html">Services</a>
+                                <a href="registration.html">Registration</a>
+                            </div>
+                        </li>
+                        <li><a href="doctors.html">Doctors</a></li>
+                        <li><a href="consulting.html">Consulting Reservation</a></li>
+                        <li><a href="pharmacy.html">Pharmacy</a></li>
+
+                        <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main">
+            <section class="section section--order">
+                <h2 class="section__title">Order Medicines</h2>
+
+                <form class="order-form" id="orderForm">
+                    <fieldset class="form-fieldset">
+                        <legend class="form-legend">Select Medicines</legend>
+
+                        <div class="form-group">
+                            <label class="form-label" for="analgesics">Analgesics:</label>
+                            <select class="form-select" id="analgesics" name="analgesics">
+                                <option value="" disabled selected>Select Analgesic</option>
+                                <option value="aspirin">Aspirin</option>
+                                <option value="ibuprofen">Ibuprofen</option>
+                                <option value="paracetamol">Paracetamol</option>
+                                <option value="naproxen">Naproxen</option>
+                                <option value="acetaminophen">Acetaminophen</option>
+                                <option value="ketoprofen">Ketoprofen</option>
+                            </select>
+                            <input class="form-input" type="number" id="analgesics-quantity" placeholder="Quantity" min="1">
+                            <button class="form-button form-button--add" type="button" onclick="addToCart('analgesics')">Add to Cart</button>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="antibiotics">Antibiotics:</label>
+                            <select class="form-select" id="antibiotics" name="antibiotics">
+                                <option value="" disabled selected>Select Antibiotic</option>
+                                <option value="amoxicillin">Amoxicillin</option>
+                                <option value="ciprofloxacin">Ciprofloxacin</option>
+                                <option value="doxycycline">Doxycycline</option>
+                                <option value="azithromycin">Azithromycin</option>
+                                <option value="cephalexin">Cephalexin</option>
+                                <option value="clindamycin">Clindamycin</option>
+                            </select>
+                            <input class="form-input" type="number" id="antibiotics-quantity" placeholder="Quantity" min="1">
+                            <button class="form-button form-button--add" type="button" onclick="addToCart('antibiotics')">Add to Cart</button>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="antidepressants">Antidepressants:</label>
+                            <select class="form-select" id="antidepressants" name="antidepressants">
+                                <option value="" disabled selected>Select Antidepressant</option>
+                                <option value="sertraline">Sertraline</option>
+                                <option value="fluoxetine">Fluoxetine</option>
+                                <option value="venlafaxine">Venlafaxine</option>
+                                <option value="duloxetine">Duloxetine</option>
+                                <option value="escitalopram">Escitalopram</option>
+                                <option value="paroxetine">Paroxetine</option>
+                            </select>
+                            <input class="form-input" type="number" id="antidepressants-quantity" placeholder="Quantity" min="1">
+                            <button class="form-button form-button--add" type="button" onclick="addToCart('antidepressants')">Add to Cart</button>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="antihistamines">Antihistamines:</label>
+                            <select class="form-select" id="antihistamines" name="antihistamines">
+                                <option value="" disabled selected>Select Antihistamine</option>
+                                <option value="loratadine">Loratadine</option>
+                                <option value="cetirizine">Cetirizine</option>
+                                <option value="diphenhydramine">Diphenhydramine</option>
+                                <option value="fexofenadine">Fexofenadine</option>
+                            </select>
+                            <input class="form-input" type="number" id="antihistamines-quantity" placeholder="Quantity" min="1">
+                            <button class="form-button form-button--add" type="button" onclick="addToCart('antihistamines')">Add to Cart</button>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="antihypertensives">Antihypertensives:</label>
+                            <select class="form-select" id="antihypertensives" name="antihypertensives">
+                                <option value="" disabled selected>Select Antihypertensive</option>
+                                <option value="lisinopril">Lisinopril</option>
+                                <option value="atenolol">Atenolol</option>
+                                <option value="losartan">Losartan</option>
+                                <option value="amlodipine">Amlodipine</option>
+                                <option value="metoprolol">Metoprolol</option>
+                                <option value="hydrochlorothiazide">Hydrochlorothiazide</option>
+                            </select>
+                            <input class="form-input" type="number" id="antihypertensives-quantity" placeholder="Quantity" min="1">
+                            <button class="form-button form-button--add" type="button" onclick="addToCart('antihypertensives')">Add to Cart</button>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-fieldset">
+                        <legend class="form-legend">Your Cart</legend>
+                        <table class="cart-table">
+                            <thead>
+                                <tr>
+                                    <th>Medicine</th>
+                                    <th>Quantity</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody id="cartItems">
+                                
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="2">Total</td>
+                                    <td id="cartTotal">$0.00</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        <button class="form-button form-button--secondary" type="button" onclick="saveToFavorites()">Add to Favorites</button>
+                        <button class="form-button form-button--secondary" type="button" onclick="applyFavorites()">Apply Favorites</button>
+                        <button class="form-button" type="button" onclick="proceedToCheckout()">Proceed to Checkout</button>
+                        <button class="form-button form-button--cart" type="button" onclick="goToCartPage()">Go to Cart</button>
+
+
+                    </fieldset>
+                </form>
+            </section>
+            
+        </main>
+        <br>
+        <br>
+        <footer class="footer">
+            <p class="footer__text">&copy; 2024 kay Hospital. All rights reserved.</p>
+            <p class="footer__text">Contact us: (123) 456-7890 | Kay@hospitals.com</p>
+        </footer>
+        <script src="./css/js/headerscript.js"></script>
+        <script src="./scripts/order.js"></script>
+    </body>
+    </html>

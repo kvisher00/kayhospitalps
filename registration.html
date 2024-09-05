@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Registration - Hospital</title>
+    <link rel="stylesheet" href="css/registration.css">
+    <link rel="icon" type="image/x-icon" href="images/business-logo-design-template-2510a832449f6d336956b5800ddbe169_screen.jpg">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/headerstyles.css">
+</head> 
+<body>
+    <header>
+        <div class="logo" id="logo">
+            <a href="index.html">
+                <img id="logo" src="images/business-logo-design-template-2510a832449f6d336956b5800ddbe169_screen.jpg" alt="Logo">
+            </a>
+            
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <nav class="navbar" id="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li class="dropdown">
+                        <a href="service.html">Services</a>
+                        <div class="dropdown-menu">
+                            <a href="service.html">Services</a>
+                            <a href="registration.html">Registration</a>
+                        </div>
+                    </li>
+                    <li><a href="doctors.html">Doctors</a></li>
+                    <li><a href="consulting.html">Consulting Reservation</a></li>
+                    <li><a href="pharmacy.html">Pharmacy</a></li>
+
+                    <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="section section--registration">
+            <h2 class="section__title">Patient Registration Form</h2>
+            <form class="registration-form" id="registrationForm">
+                <fieldset class="form-fieldset">
+                    <legend class="form-legend">Personal Information</legend>
+
+                    <div class="form-group">
+                        <label class="form-label" for="firstName">First Name:</label>
+                        <input class="form-input" type="text" id="firstName" name="firstName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="lastName">Last Name:</label>
+                        <input class="form-input" type="text" id="lastName" name="lastName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="dob">Date of Birth:</label>
+                        <input class="form-input" type="date" id="dob" name="dob" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="gender">Gender:</label>
+                        <select class="form-select" id="gender" name="gender" required>
+                            <option value="" disabled selected>Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="email">Email:</label>
+                        <input class="form-input" type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="phone">Phone Number:</label>
+                        <input class="form-input" type="tel" id="phone" name="phone" required>
+                    </div>
+                </fieldset>
+
+                <fieldset class="form-fieldset">
+                    <legend class="form-legend">Address Information</legend>
+
+                    <div class="form-group">
+                        <label class="form-label" for="address">Address:</label>
+                        <input class="form-input" type="text" id="address" name="address" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="city">City:</label>
+                        <input class="form-input" type="text" id="city" name="city" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="state">State:</label>
+                        <input class="form-input" type="text" id="state" name="state" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="zip">Zip Code:</label>
+                        <input class="form-input" type="text" id="zip" name="zip" required>
+                    </div>
+                </fieldset>
+
+                <fieldset class="form-fieldset">
+                    <legend class="form-legend">Insurance Information</legend>
+
+                    <div class="form-group">
+                        <label class="form-label" for="insuranceProvider">Insurance Provider:</label>
+                        <input class="form-input" type="text" id="insuranceProvider" name="insuranceProvider" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="policyNumber">Policy Number:</label>
+                        <input class="form-input" type="text" id="policyNumber" name="policyNumber" required>
+                    </div>
+                </fieldset>
+
+                <button class="form-button" type="submit">Register</button>
+            </form>
+        </section>
+    </main>
+    <br>
+    <br>
+    <footer class="footer">
+        <p class="footer__text">&copy; 2024 kay Hospital. All rights reserved.</p>
+        <p class="footer__text">Contact us: (123) 456-7890 | Kay@hospitals.com</p>
+    </footer>
+    <script src="./css/js/headerscript.js"></script>
+    <script src="./scripts/registration.js"></script>
+</body>
+</html>

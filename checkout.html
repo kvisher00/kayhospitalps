@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Checkout - Kay Hospital Pharmacy</title>
+        <link rel="stylesheet" href="css/checkout.css">
+        <link rel="icon" type="image/x-icon" href="images/business-logo-design-template-2510a832449f6d336956b5800ddbe169_screen.jpg">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/headerstyles.css">
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/business-logo-design-template-2510a832449f6d336956b5800ddbe169_screen.jpg" alt="Logo">
+                </a>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <nav class="navbar" id="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li class="dropdown">
+                            <a href="service.html">Services</a>
+                            <div class="dropdown-menu">
+                                <a href="service.html">Services</a>
+                                <a href="registration.html">Registration</a>
+                            </div>
+                        </li>
+                        <li><a href="doctors.html">Doctors</a></li>
+                        <li><a href="consulting.html">Consulting Reservation</a></li>
+                        <li><a href="pharmacy.html">Pharmacy</a></li>
+
+                        <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main">
+            <section class="section section--checkout">
+                <h2 class="section__title">Checkout</h2>
+    
+                <!-- Order Summary -->
+                <div class="order-summary">
+                    <h3>Order Summary</h3>
+                    <table class="cart-table">
+                        <thead>
+                            <tr>
+                                <th>Medicine</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody id="orderItems">
+                            <!-- Order items will be populated here -->
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="2">Total</td>
+                                <td id="orderTotal">$0.00</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+    
+                <!-- Customer Details Form -->
+                <form class="checkout-form" id="checkoutForm">
+                    <h3>Personal Details</h3>
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" required>
+    
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+    
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+    
+                    <h3>Delivery Details</h3>
+                    <label for="address">Address:</label>
+                    <textarea id="address" name="address" rows="3" required></textarea>
+    
+                    <label for="deliveryDate">Preferred Delivery Date:</label>
+                    <input type="date" id="deliveryDate" name="deliveryDate" required>
+    
+                    <h3>Payment Information</h3>
+                    <label for="cardNumber">Card Number:</label>
+                    <input type="text" id="cardNumber" name="cardNumber" required>
+    
+                    <label for="expiryDate">Expiry Date:</label>
+                    <input type="month" id="expiryDate" name="expiryDate" required>
+    
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" name="cvv" required>
+    
+                    <button type="submit" class="form-button">Pay</button>
+                </form>
+            </section>
+        </main>
+        <br>
+        <br>
+        <br>
+
+
+        <footer class="footer">
+            <p class="footer__text">&copy; 2024 kay Hospital. All rights reserved.</p>
+            <p class="footer__text">Contact us: (123) 456-7890 | Kay@hospitals.com</p>
+        </footer>
+        <script src="./css/js/headerscript.js"></script>
+        <script src="./scripts/checkout.js"></script>
+    </body>
+    </html>

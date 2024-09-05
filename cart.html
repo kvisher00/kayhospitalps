@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - Kay Hospital</title>
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/headerstyles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/x-icon" href="images/business-logo-design-template-2510a832449f6d336956b5800ddbe169_screen.jpg">
+</head>
+<body>
+    <header>
+        <div class="logo" id="logo">
+            <a href="index.html">
+                <img id="logo" src="images/business-logo-design-template-2510a832449f6d336956b5800ddbe169_screen.jpg" alt="Logo">
+            </a>
+            
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <nav class="navbar" id="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li class="dropdown">
+                        <a href="service.html">Services</a>
+                        <div class="dropdown-menu">
+                            <a href="service.html">Services</a>
+                            <a href="registration.html">Registration</a>
+                        </div>
+                    </li>
+                    <li><a href="doctors.html">Doctors</a></li>
+                    <li><a href="consulting.html">Consulting Reservation</a></li>
+                    <li><a href="pharmacy.html">Pharmacy</a></li>
+
+                    <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="cart-section">
+            <h2 class="cart-section__title">Medicines in Your Cart</h2>
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th>Medicine</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="cartItems">
+                    
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Total</td>
+                        <td id="cartTotal">$0.00</td>
+                        <td><button class="checkout-button" onclick="proceedToCheckout()">Checkout</button></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+    </main>
+    <footer class="footer">
+        <p class="footer__text">&copy; 2024 Kay Hospital. All rights reserved.</p>
+        <p class="footer__text">Contact us: (123) 456-7890 | Kay@hospitals.com</p>
+    </footer>
+    <script src="./scripts/cart.js"></script>
+    <script src="./css/js/headerscript.js"></script>
+</body>
+</html>

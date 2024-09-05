@@ -1,0 +1,102 @@
+.section--doctors {
+    padding: 1rem;
+    background-color: #fff;
+}
+
+/* Grid Layout */
+.doctor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* Doctor Card */
+.doctor {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Hover Effect */
+.doctor:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Image */
+.doctor__image {
+    width: 120px; /* Adjust size as needed */
+    height: 120px; /* Adjust size as needed */
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+    object-fit: cover; /* Ensure the image covers the circle */
+    transition: transform 0.3s ease;
+    animation: scaleIn 0.6s ease-in-out;
+}
+
+/* Image Hover Effect */
+.doctor:hover .doctor__image {
+    transform: scale(1.1);
+}
+
+/* Name */
+.doctor__name {
+    font-size: 1.2rem;
+    color: #007BFF;
+    margin: 0.5rem 0;
+}
+
+/* Specialty */
+.doctor__specialty {
+    font-size: 1rem;
+    color: #555;
+    margin: 0.5rem 0;
+}
+
+/* Description */
+.doctor__description {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scale-In Animation */
+@keyframes scaleIn {
+    0% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .doctor__image {
+        width: 100px; /* Smaller size on smaller screens */
+        height: 100px; /* Smaller size on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .doctor__image {
+        width: 80px; /* Even smaller size on very small screens */
+        height: 80px; /* Even smaller size on very small screens */
+    }
+}
